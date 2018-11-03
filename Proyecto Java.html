@@ -1,0 +1,70 @@
+ <!DOCTYPE html>
+<html>
+<style type="text/css">
+body {
+  background-image: url('https://image.slidesharecdn.com/pdi-140224080400-phpapp02/95/usos-didcticos-de-la-pizarra-digital-interactiva-2-638.jpg?cb=1393229308');
+     background-size:100% 420%;
+     background-repeat: no-repeat;
+} 
+#demo {
+       color: black;
+       padding: 0px;
+       font-size: 40px;
+
+#leo{
+}
+</style>
+
+<body>
+<div class="bgimg"><center>
+<p id="demo"></cente></p>
+
+<script>
+
+var buenas =0;
+var total =0
+var i=0;
+var result;
+var result_2; 
+var result;
+var num1=Math.floor(Math.random() * 10);
+var num2=Math.floor(Math.random() * 10);
+var operador=Math.floor(Math.random() * 3);
+switch (operador) {
+    case 0:
+        result = num1 +" + "+ num2+ " = ";
+        result_2= Number(num1+ num2);
+        break;
+    case 1:
+        result = num1 +" - "+ num2+ " = ";
+        result_2= Number(num1- num2);
+        break;
+    case 2:
+        result = num1 +" X "+ num2+ " = ";
+        result_2= Number(num1* num2);
+        break;
+  
+}
+
+
+function verifica() {
+    var entrada =  document.getElementById("leo").value;
+    total ++;
+   if(entrada == result_2)
+   {
+     buenas++;
+    alert("Correct! "+ buenas + " Good Job ");
+    }
+    
+    else
+    alert("Incorrect");
+    if(total ==2)
+     alert("The answer is = "+ buenas + "/"+ total);
+     }
+     
+document.getElementById("demo").innerHTML = result + " : <input id=leo type=text> <button type=button onclick=verifica()>Submit</button>";
+</script>
+</div>
+</body>
+</html>
+
