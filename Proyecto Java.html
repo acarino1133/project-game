@@ -27,9 +27,9 @@ var i=0;
 var result;
 var result_2; 
 var result;
-var num1=Math.floor(Math.random() * 10);
-var num2=Math.floor(Math.random() * 10);
-var operador=Math.floor(Math.random() * 3);
+var num1= math.floor(math.random() * 10);
+var num2= math.floor(math.random() * 10);
+var operador= math.floor(math.random() * 3);
 switch (operador) {
     case 0:
         result = num1 +" + "+ num2+ " = ";
@@ -41,14 +41,14 @@ switch (operador) {
         break;
     case 2:
         result = num1 +" X "+ num2+ " = ";
-        result_2= Number(num1* num2);
+        result_2 = Number(num1* num2);
         break;
   
-}
+}  
 
 
 function verifica() {
-    var entrada =  document.getElementById("leo").value;
+    var entrada = document .getElementById("leo").value;
     total ++;
    if(entrada == result_2)
    {
