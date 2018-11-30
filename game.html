@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <style type="text/css">
+        body {
+			background-image: url('\\cool_chalkboard.jpg');  
+            background-size:100% 420%;
+            background-repeat: no-repeat;
+        } 
+        #demo {
+               color: red;
+               margin-top: 10px;
+               font-size: 40px;
+        	   }
+        #leo{
+            
+        }
+        </style>
+        
+    </head>
+    <body>
+        <div>
+        
+        <p id="demo"></p>
+        
+        </div>
+		<script>
+            var buenas =0;
+            var total =0;
+            //var i=0;
+            var result = 0;
+            var result_2; 
+            var num1= Math.floor(Math.random() * 10);
+            var num2= Math.floor(Math.random() * 10);
+            var operador= Math.floor(Math.random() * 3);
+           
+            switch (operador){ 
+                case 0:
+                    result = num1 +" + "+ num2+ " = ";
+                    result_2= Number (num1 + num2);
+                    break;
+                case 1:
+                    result = num1 +" - "+ num2+ " = ";
+                    result_2 = Number(num1- num2);
+                    break;
+                case 2:
+                    result = num1 +" X "+ num2+ " = ";
+                    result_2= Number(num1* num2);
+                    break;
+				default:
+					result = 0;
+					break;
+            }
+               
+           
+            function verifica() {
+			 var entrada =  document.getElementById("leo").value;
+             total++;
+               if(entrada == result_2)
+               {
+                 buenas++;
+                alert("Correct! "+ buenas + " Good Job ");
+                }
+                
+                else {
+					alert("Incorrect");
+					if(total ==2)
+					{
+					 alert("The answer is = "+ buenas + "/"+ total);
+					 }
+				}
+            }
+			
+         document.getElementById("demo").innerHTML = result + " : <input id=leo type=text /> <button type=button onclick=verifica()>Submit</button>";
+
+		 // document.getElementById("demo").innerHTML = result + " : <input id=leo type=text/";
+		  //document.getElementById("demo").innerHTML = result + "<button type=button onclick=verifica()>Submit</button>";
+		   //document.innerHTML = result + " : <input id=leo type=text/> <button type=button onclick=verifica()>Submit</button>";
+		   /*https://images-na.ssl-images-amazon.com/images/I/81MphFsKr4L._SL1500_.jpg*/
+        </script>
+    </body>
+</html>
